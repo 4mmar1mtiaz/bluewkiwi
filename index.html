@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue Kiwi Complete Pool</title>
+    <meta name="description"
+        content="Special Limited-Time Pool Cleaning Only $39.99. Regularly $139.99 — Save Over 70% Today. Enjoy a spotless, swim-ready pool cleaned by certified professionals." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Trustindex Google Widget -->
+    <script src="https://cdn.trustindex.io/loader.js?1763632729" async defer></script>
+
+    <!-- GHL Form Embed -->
+    <script src="https://app.bluekiwipools.com/js/form_embed.js"></script>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --blue-dark: #1a3a8c;
+            --blue-main: #1e50d4;
+            --blue-light: #2b6de8;
+            --cyan: #00c2e0;
+            --cyan-light: #4de8ff;
+            --white: #ffffff;
+            --gray-bg: #f0f4fc;
+            --gray-light: #e8ecf4;
+            --text-dark: #111827;
+            --text-mid: #4b5563;
+            --text-light: #6b7280;
+            --border-r: 12px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ─── NAVBAR ─── */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: linear-gradient(135deg, #e8f0ff 0%, #f5f8ff 100%);
+            border-bottom: 1px solid rgba(30, 80, 212, .1);
+            box-shadow: 0 2px 16px rgba(30, 80, 212, .08);
+        }
+
+        .navbar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .navbar-logo img {
+            height: 72px;
+            width: auto;
+        }
+
+        .navbar-ctas {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            background: var(--blue-dark);
+            color: #fff;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            transition: background .2s;
+        }
+
+        .btn-phone:hover {
+            background: var(--blue-main);
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            background: linear-gradient(90deg, var(--cyan) 0%, #00a3be 100%);
+            color: #fff;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: opacity .2s, transform .15s;
+        }
+
+        .btn-cta:hover {
+            opacity: .9;
+            transform: translateY(-1px);
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            position: relative;
+            min-height: 560px;
+            background: url('https://offer.bluekiwipools.com/wp-content/uploads/2025/10/Blue-Kiwi-.jpg') center center / cover no-repeat;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(10, 30, 100, .65) 0%, rgba(10, 30, 100, .35) 60%, transparent 100%);
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 60px 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(32px, 4.5vw, 54px);
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .hero-text h1 .accent {
+            color: var(--cyan);
+        }
+
+        .hero-text h3 {
+            font-size: clamp(16px, 2vw, 20px);
+            font-weight: 600;
+            color: rgba(255, 255, 255, .88);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, .80);
+            margin-bottom: 30px;
+        }
+
+        .hero-text p em {
+            font-style: italic;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        /* ─── HERO FORM CARD (GHL popup) ─── */
+        .hero-form-card {
+            background: rgba(255, 255, 255, .97);
+            border-radius: 16px;
+            padding: 36px 32px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+        }
+
+        .hero-form-card h2 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--blue-dark);
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .hero-form-card p {
+            font-size: 15px;
+            color: var(--text-light);
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+
+        /* GHL iframe container */
+        .ghl-iframe-wrapper {
+            width: 100%;
+            min-height: 420px;
+        }
+
+        .ghl-iframe-wrapper iframe {
+            width: 100%;
+            min-height: 420px;
+            border: none;
+            border-radius: 8px;
+            display: block;
+        }
+
+        /* ─── TRUST BANNER ─── */
+        .trust-banner {
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-main) 100%);
+            padding: 18px 24px;
+        }
+
+        .trust-banner-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .trust-item .icon {
+            font-size: 22px;
+        }
+
+        /* ─── SECTION WRAPPER ─── */
+        section {
+            padding: 80px 24px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ─── RELAX SECTION ─── */
+        .relax-section {
+            background: linear-gradient(135deg, var(--blue-main) 0%, var(--blue-light) 100%);
+            padding: 60px 24px;
+        }
+
+        .relax-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 50px 48px;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 48px;
+            align-items: center;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, .08);
+        }
+
+        .relax-logo img {
+            width: 100%;
+            max-width: 220px;
+        }
+
+        .relax-content h2 {
+            font-size: clamp(26px, 3.5vw, 40px);
+            font-weight: 800;
+            color: var(--blue-dark);
+            margin-bottom: 16px;
+        }
+
+        .relax-content p {
+            font-size: 16px;
+            color: var(--text-mid);
+            margin-bottom: 12px;
+        }
+
+        .relax-content p strong {
+            color: var(--blue-dark);
+            font-style: italic;
+        }
+
+        .relax-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        /* ─── PROBLEM SECTION ─── */
+        .problem-section {
+            background: var(--gray-bg);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .problem-text h2 {
+            font-size: clamp(26px, 3.5vw, 40px);
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .problem-text h2 .accent {
+            color: var(--blue-main);
+        }
+
+        .problem-text p {
+            font-size: 16px;
+            color: var(--text-mid);
+            margin-bottom: 16px;
+        }
+
+        .problem-text h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--blue-main);
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        .problem-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(30, 80, 212, .15);
+            border: 3px solid var(--cyan);
+        }
+
+        /* ─── FEATURES SECTION ─── */
+        .features-section {
+            background: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .features-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, .12);
+            border: 3px solid var(--cyan);
+        }
+
+        .features-content h2 {
+            font-size: clamp(26px, 3.5vw, 40px);
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 28px;
+        }
+
+        .features-content h2 .accent {
+            color: var(--blue-main);
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon {
+            width: 28px;
+            height: 28px;
+            background: var(--blue-main);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .feature-icon svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2.5;
+        }
+
+        .feature-text h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .feature-text p {
+            font-size: 15px;
+            color: var(--text-mid);
+        }
+
+        .features-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+        }
+
+        /* ─── TRUST SECTION ─── */
+        .trust-section {
+            background: linear-gradient(135deg, var(--blue-main) 0%, var(--blue-light) 100%);
+            padding: 60px 24px;
+        }
+
+        .trust-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 50px 48px;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 48px;
+            align-items: center;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, .08);
+        }
+
+        .trust-logo img {
+            width: 100%;
+            max-width: 220px;
+        }
+
+        .trust-content h2 {
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 800;
+            color: var(--blue-dark);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .trust-content p {
+            font-size: 16px;
+            color: var(--text-mid);
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .trust-content p strong {
+            font-style: italic;
+        }
+
+        .trust-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 24px;
+        }
+
+        /* Trust badges */
+        .badges-section {
+            background: var(--gray-bg);
+            padding: 50px 24px;
+        }
+
+        .badges-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .badge-item img {
+            height: 64px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* ─── TESTIMONIALS ─── */
+        .testimonials-section {
+            background: var(--white);
+            padding: 80px 24px;
+        }
+
+        .testimonials-section h2 {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .reviews-widget-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Manual reviews fallback */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .review-card {
+            background: #fff;
+            border: 1px solid var(--gray-light);
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .06);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .review-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--blue-main);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .review-author h4 {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .review-author span {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .review-stars {
+            color: #f59e0b;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .review-text {
+            font-size: 14px;
+            color: var(--text-mid);
+            line-height: 1.6;
+        }
+
+        .google-g {
+            margin-left: auto;
+            font-size: 18px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4285F4, #34A853, #FBBC05, #EA4335);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ─── FAQ ─── */
+        .faq-section {
+            background: var(--gray-bg);
+        }
+
+        .faq-section h2 {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .faq-section h2 .accent {
+            color: var(--blue-main);
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #d1d5db;
+            padding: 0;
+        }
+
+        .faq-q {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 20px 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--blue-main);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+        }
+
+        .faq-q .toggle {
+            font-size: 20px;
+            font-weight: 400;
+            flex-shrink: 0;
+            margin-left: 16px;
+        }
+
+        .faq-a {
+            font-size: 15px;
+            color: var(--text-mid);
+            padding-bottom: 18px;
+            display: none;
+        }
+
+        .faq-item.open .faq-a {
+            display: block;
+        }
+
+        /* ─── ENJOY SECTION ─── */
+        .enjoy-section {
+            background: linear-gradient(135deg, var(--blue-main) 0%, var(--blue-light) 100%);
+            text-align: center;
+        }
+
+        .enjoy-section h2 {
+            font-size: clamp(26px, 3.5vw, 42px);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .enjoy-section p {
+            font-size: 17px;
+            color: rgba(255, 255, 255, .88);
+            margin-bottom: 32px;
+        }
+
+        .enjoy-section p strong {
+            display: block;
+            margin-top: 8px;
+        }
+
+        .enjoy-btns {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ─── BOTTOM FORM SECTION ─── */
+        .bottom-form-section {
+            background: linear-gradient(135deg, var(--blue-main) 0%, var(--blue-dark) 100%);
+            padding: 80px 24px;
+        }
+
+        .bottom-form-card {
+            background: rgba(255, 255, 255, .97);
+            border-radius: 20px;
+            padding: 50px 40px;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+            border: 2px solid var(--cyan);
+        }
+
+        .bottom-form-card h2 {
+            font-size: clamp(24px, 3.5vw, 36px);
+            font-weight: 800;
+            color: var(--blue-dark);
+            margin-bottom: 10px;
+        }
+
+        .bottom-form-card p {
+            font-size: 15px;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            background: #111;
+            color: rgba(255, 255, 255, .7);
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: var(--cyan);
+            text-decoration: none;
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 900px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-form-card {
+                order: -1;
+            }
+
+            .relax-card,
+            .trust-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .relax-logo,
+            .trust-logo {
+                display: flex;
+                justify-content: center;
+            }
+
+            .problem-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .problem-image {
+                order: -1;
+            }
+
+            .navbar-inner {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .hero-btns,
+            .relax-btns,
+            .features-btns,
+            .trust-btns,
+            .enjoy-btns {
+                flex-direction: column;
+            }
+
+            .btn-phone,
+            .btn-cta {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .badges-grid {
+                gap: 20px;
+            }
+
+            .badge-item img {
+                height: 44px;
+            }
+
+            footer {
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══ NAVBAR ═══ -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a class="navbar-logo" href="#">
+                <img src="https://offer.bluekiwipools.com/wp-content/uploads/2025/10/Logo.avif"
+                    alt="Blue Kiwi Complete Pool Service" />
+            </a>
+            <div class="navbar-ctas">
+                <a class="btn-phone" href="tel:+16234398370">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path
+                            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16.14 16.14 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+                    </svg>
+                    (623) 439-8370
+                </a>
+                <button class="btn-cta" onclick="triggerGHLPopup()">Claim My $39.99 Cleaning</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <h1>Special Limited-Time<br>Pool Cleaning <span class="accent">Only<br>$39.99</span></h1>
+                <h3>Regularly $139.99 — Save Over 70% Today</h3>
+                <p>Enjoy a spotless, swim-ready pool cleaned by certified professionals who care about quality.
+                    <em>Terms &amp; Conditions (does not include specialty chemicals)</em></p>
+                <div class="hero-btns">
+                    <a class="btn-phone" href="tel:+16234398370">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16.14 16.14 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+                        </svg>
+                        (623) 439-8370
+                    </a>
+                    <button class="btn-cta" onclick="triggerGHLPopup()">Claim My $39.99 Cleaning</button>
+                </div>
+            </div>
+
+            <!-- HERO FORM — replaced with GHL popup form -->
+            <div class="hero-form-card" id="website-form">
+                <h2>Secure Your $39 Pool Cleaning Offer</h2>
+                <p>Spots are limited. Secure your discounted cleaning before this offer ends.</p>
+                <div class="ghl-iframe-wrapper">
+                    <iframe src="https://app.bluekiwipools.com/widget/form/LlAtxut1rg0q4gZHZs1q"
+                        style="display:block;width:100%;min-height:580px;border:none;border-radius:8px;"
+                        id="inline-form-hero" title="fb lead form" allowtransparency="true"
+                        allow="camera; microphone; autoplay; encrypted-media;"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ RELAX SECTION ═══ -->
+    <section class="relax-section">
+        <div class="relax-card">
+            <div class="relax-logo">
+                <img src="https://offer.bluekiwipools.com/wp-content/uploads/2025/10/Logo.avif"
+                    alt="Blue Kiwi Complete Pool Service" />
+            </div>
+            <div class="relax-content">
+                <h2>Relax. We'll Handle The Pool.</h2>
+                <p>Your pool should be a place to unwind — not another chore on your weekend list.</p>
+                <p><strong>At Blue Kiwi Pools, we take care of the hard work for you. For a limited time, get a complete
+                        professional pool cleaning for just $39.99 (usually $139.99).</strong></p>
+                <p>Our trained technicians clean, inspect, and balance your pool water so it's always ready when you
+                    are.</p>
+                <p><strong>No hidden fees. Fast scheduling. 100% satisfaction guaranteed.</strong></p>
+                <div class="relax-btns">
+                    <a class="btn-phone" href="tel:+16234398370">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16.14 16.14 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+                        </svg>
+                        (623) 439-8370
+                    </a>
+                    <button class="btn-cta" onclick="triggerGHLPopup()">Claim My $39.99 Cleaning</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PROBLEM SECTION ═══ -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="problem-grid">
+                <div class="problem-text">
+                    <h2>The Problem: <span class="accent">Pool Care That Never Ends</span></h2>
+                    <p>Between balancing chemicals, brushing tiles, and cleaning filters, pool care can quickly turn
+                        into a full-time job. Even small maintenance gaps can cause cloudy water, stains, or algae
+                        buildup.</p>
+                    <h4>The Solution: Blue Kiwi Pools.</h4>
+                    <p>We handle every detail of your pool maintenance so you can enjoy clear, healthy water all season
+                        long — without the frustration or wasted weekends.</p>
+                    <div class="relax-btns" style="margin-top:24px;">
+                        <a class="btn-phone" href="tel:+16234398370">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16.14 16.14 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+                            </svg>
+                            (623) 439-8370
+                        </a>
+                        <button class="btn-cta" onclick="triggerGHLPopup()">Claim My $39.99 Cleaning</button>
+                    </div>
+                </div>
+                <div class="problem-image">
+                    <img src="https://offer.bluekiwipools.com/wp-content/uploads/2025/10/desktop-1024x137.png"
+                        onerror="this.src='https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=600&q=80'"
+                        alt="Pool technician at work" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FEATURES SECTION ═══ -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="features-image">
+                    <img src="https://offer.bluekiwipools.com/wp-content/uploads/2025/10/pool.avif"
+                        onerror="this.src='https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80'"
+                        alt="Sparkling clean pool" />
+                </div>
+                <div class="features-content">
+                    <h2>What You'll Love <span class="accent">About Our Service</span></h2>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Complete Cleaning</h3>
+                            <p>Skimming, brushing, vacuuming, and filter maintenance done right.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Balanced Water Chemistry</h3>
+                            <p>Proper pH and sanitizer levels for safe, clean swimming.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Easy Scheduling</h3>
+                            <p>Book online or by phone — we handle the rest.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Trusted Professionals</h3>
+                            <p>Licensed, insured, and background-checked technicians.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Real Savings</h3>
+                            <p>Save $100+ with this limited-time introductory offer.</p>
+                        </div>
+                    </div>
+                    <div class="features-btns">
+                        <a class="btn-phone" href="tel:+16234398370">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16.14 16.14 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+                            </svg>
+                            (623) 439-8370
+                        </a>
+                        <button class="btn-cta" onclick="triggerGHLPopup()">Claim My $39.99 Cleaning</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ TRUST SECTION ═══ -->
+    <section class="trust-section">
+        <div class="trust-card">
+            <div class="trust-logo">
+                <img src="https://offer.bluekiwipools.com/wp-content/uploads/2025/10/Logo.avif"
+                    alt="Blue Kiwi Complete Pool Service" />
+            </div>
+            <div class="trust-content">
+                <h2>Trusted By Homeowners Across Arizona</h2>
+                <p>Blue Kiwi Pools is a locally trusted company known for quality service and reliable technicians.
+                    We're licensed, insured, and committed to your satisfaction — guaranteed.</p>
+                <p><strong>Privacy Assurance:<br>Your personal information is always safe with us. We never share or
+                        sell your data.</strong></p>
+                <div class="trust-btns">
+                    <a class="btn-phone" href="tel:+16234398370">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16.14 16.14 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+                        </svg>
+                        (623) 439-8370
+                    </a>
+                    <button class="btn-cta" onclick="triggerGHLPopup()">Claim My $39.99 Cleaning</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ TRUST BADGES ═══ -->
+    <div class="badges-section">
+        <div class="badges-grid">
+            <div class="badge-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                    alt="Google Reviews ★★★★★" style="height:36px;" />
+                <div style="font-size:13px;font-weight:700;color:#333;margin-top:4px;text-align:center;">Reviews ★★★★★
+                </div>
+            </div>
+            <div class="badge-item" style="text-align:center;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Yelp_Logo.svg" alt="Yelp 5-Star Business"
+                    style="height:36px;" />
+                <div style="font-size:13px;font-weight:700;color:#e00;margin-top:4px;">★★★★★ 5-Star Business</div>
+            </div>
+            <div class="badge-item" style="text-align:center;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/BBB_Logo.svg"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                    alt="BBB Accredited Business" style="height:56px;" />
+                <div
+                    style="display:none;background:#003466;color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:800;align-items:center;gap:6px;">
+                    BBB Accredited Business</div>
+            </div>
+            <div class="badge-item" style="text-align:center;">
+                <div style="display:flex;align-items:center;gap:8px;">
+                    <div
+                        style="width:48px;height:48px;background:#34A853;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                        <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" stroke="white" stroke-width="3" fill="none" />
+                        </svg>
+                    </div>
+                    <div style="text-align:left;">
+                        <div style="font-size:15px;font-weight:800;color:#111;">GOOGLE GUARANTEED</div>
+                        <div style="font-size:11px;color:#555;">Pre-screened &amp; insured professionals</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ TESTIMONIALS ═══ -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Testimonials &amp; Success Stories</h2>
+            <!-- Trustindex widget will render here -->
+            <div class="reviews-widget-wrap">
+                <div id="trustindex-widget-placeholder" data-widget-id="1763632729"></div>
+            </div>
+
+            <!-- Fallback reviews (shown if widget doesn't load) -->
+            <div class="reviews-grid" style="margin-top:32px;">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">R</div>
+                        <div class="review-author">
+                            <h4>Mona C</h4><span>6 months ago</span>
+                        </div>
+                        <span class="google-g">G</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Charles Stapley our pool guy was very constant on pool upkeep.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar" style="background:#1e50d4;">B</div>
+                        <div class="review-author">
+                            <h4>Blake Kent</h4><span>6 months ago</span>
+                        </div>
+                        <span class="google-g">G</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">We've been with Blue Kiwi for over 3 years. They have always taken great care
+                        of our pool and their service is excellent!! Our current pool tech, Michael, is amazing!!!</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar" style="background:#0d9488;">J</div>
+                        <div class="review-author">
+                            <h4>Jeniffer Martinez</h4><span>6 months ago</span>
+                        </div>
+                        <span class="google-g">G</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Ever since I have started using this company it has been such a huge relief
+                        to not worry about my pool. Charles always does an amazing job and is always so kind!</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar" style="background:#9333ea;">T</div>
+                        <div class="review-author">
+                            <h4>Terri L Venerable</h4><span>6 months ago</span>
+                        </div>
+                        <span class="google-g">G</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Michael my pool tech is great. He&#39;s friendly and knowledgeable, always
+                        staying in contact. I highly recommend Michael at Blue Kiwi Pools.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar" style="background:#dc2626;">C</div>
+                        <div class="review-author">
+                            <h4>Chris Knueppel</h4><span>6 months ago</span>
+                        </div>
+                        <span class="google-g">G</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Joey does a great job cleaning our pool each week. Very reliable and
+                        friendly.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar" style="background:#ea580c;">H</div>
+                        <div class="review-author">
+                            <h4>Holly Miller</h4><span>6 months ago</span>
+                        </div>
+                        <span class="google-g">G</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Josh takes care of our pool every week and does an awesome job. He always
+                        goes the extra mile to make sure we're happy, and he's super thoughtful and reliable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FAQ SECTION ═══ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked <span class="accent">Questions</span></h2>
+            <div class="faq-list">
+                <div class="faq-item open">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        What's Included In The $39.99 Cleaning?
+                        <span class="toggle">✕</span>
+                    </button>
+                    <div class="faq-a">You'll receive a complete pool cleaning service, including brushing, vacuuming,
+                        skimming, filter inspection, and water testing.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        Are There Any Hidden Fees?
+                        <span class="toggle">+</span>
+                    </button>
+                    <div class="faq-a">No hidden fees. The $39.99 covers a standard pool cleaning. Specialty chemicals
+                        are not included and may be quoted separately if needed.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        How Do I Schedule My Cleaning?
+                        <span class="toggle">+</span>
+                    </button>
+                    <div class="faq-a">Simply fill out the form above or call us at (623) 439-8370. We'll reach out to
+                        confirm a time that works for you.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        Is This Offer Available In My Area?
+                        <span class="toggle">+</span>
+                    </button>
+                    <div class="faq-a">We serve homeowners across the greater Phoenix / Arizona area. Contact us to
+                        confirm availability in your neighborhood.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        What If I'm Not Satisfied?
+                        <span class="toggle">+</span>
+                    </button>
+                    <div class="faq-a">We stand behind our work 100%. If you're not satisfied, contact us and we'll make
+                        it right.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ ENJOY SECTION ═══ -->
+    <section class="enjoy-section">
+        <div class="container" style="text-align:center;">
+            <h2>Enjoy A Perfect Pool Without The Work</h2>
+            <p>
+                For just $39.99, you'll have a sparkling clean pool ready for your next swim — no chemicals, no
+                equipment, no hassle.
+                <strong>Trusted experts. Local service. Real results.</strong>
+            </p>
+            <div class="enjoy-btns">
+                <a class="btn-phone" href="tel:+16234398370"
+                    style="background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.5);">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path
+                            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16.14 16.14 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+                    </svg>
+                    (623) 439-8370
+                </a>
+                <button class="btn-cta" onclick="triggerGHLPopup()">Claim My $39.99 Cleaning</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ BOTTOM FORM SECTION ═══ -->
+    <section class="bottom-form-section" id="bottom-form">
+        <div class="bottom-form-card">
+            <h2>Book Your $39.99 Pool Cleaning Today</h2>
+            <p>Spots are limited. Secure your discounted cleaning before this offer ends.</p>
+            <button class="btn-cta" onclick="triggerGHLPopup()"
+                style="font-size:17px;padding:16px 36px;width:100%;justify-content:center;">
+                Claim My $39.99 Cleaning →
+            </button>
+            <p style="margin-top:16px;font-size:13px;color:#888;">Or call us directly: <a href="tel:+16234398370"
+                    style="color:var(--blue-main);font-weight:700;">(623) 439-8370</a></p>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+        <span>© 2025 Blue Kiwi Complete Pool Services. All rights reserved.</span>
+        <span>License No. ROC 350931 &nbsp;|&nbsp; Bond LSM1865899</span>
+    </footer>
+
+    <!-- ═══ GHL POPUP IFRAME ═══ -->
+    <iframe src="https://app.bluekiwipools.com/widget/form/LlAtxut1rg0q4gZHZs1q"
+        style="display:none;width:100%;height:100%;border:none;border-radius:3px" id="popup-LlAtxut1rg0q4gZHZs1q"
+        data-layout="{'id':'POPUP'}" data-trigger-type="alwaysShow" data-trigger-value=""
+        data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate"
+        data-deactivation-value="" data-form-name="fb lead form" data-height="578"
+        data-layout-iframe-id="popup-LlAtxut1rg0q4gZHZs1q" data-form-id="LlAtxut1rg0q4gZHZs1q"
+        title="fb lead form"></iframe>
+    <script src="https://app.bluekiwipools.com/js/form_embed.js"></script>
+
+    <script>
+        // Trigger the GHL popup
+        function triggerGHLPopup() {
+            // Try GHL's native method first
+            if (window.GHL_FORM && typeof window.GHL_FORM.openPopup === 'function') {
+                window.GHL_FORM.openPopup('LlAtxut1rg0q4gZHZs1q');
+                return;
+            }
+            // Fallback: scroll to inline hero form
+            const el = document.getElementById('website-form');
+            if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+        }
+
+        // FAQ accordion
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-item');
+            const toggle = btn.querySelector('.toggle');
+            const isOpen = item.classList.contains('open');
+            // close all
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('open');
+                i.querySelector('.toggle').textContent = '+';
+            });
+            if (!isOpen) {
+                item.classList.add('open');
+                toggle.textContent = '✕';
+            }
+        }
+
+        // Auto-resize GHL iframe by listening for messages from GHL
+        window.addEventListener('message', function (e) {
+            if (e.data && e.data.type === 'GHL_FORM_HEIGHT') {
+                const iframes = document.querySelectorAll('iframe[data-form-id="LlAtxut1rg0q4gZHZs1q"]');
+                iframes.forEach(function (iframe) {
+                    if (iframe.id !== 'popup-LlAtxut1rg0q4gZHZs1q') {
+                        iframe.style.minHeight = e.data.height + 'px';
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
